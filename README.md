@@ -2,7 +2,7 @@
 
 L'affondamento del Titanic è uno dei naufragi più famosi della storia. Il 15 aprile 1912, durante il suo viaggio inaugurale, il Titanic affondò dopo aver colliso con un iceberg, causando la morte di 1502 delle 2224 persone tra passeggeri e membri dell'equipaggio. La costruzione del Titanic costò circa 7,5 milioni di dollari, e affondò nell'oceano a causa della collisione.
 
-Dataset: [Titanic - Kaggle](https://www.kaggle.com/competitions/titanic)
+Dataset:   [Titanic - Kaggle](https://www.kaggle.com/competitions/titanic)
 
 ## Obiettivo
 L’obiettivo è quello di creare un notebook per effettuare un’analisi esplorativa dei dati e capire se chi è sopravvissuto è semplicemente stato fortunato o se ci fossero persone che avessero più probabilità di altre di salvarsi, in relazione alle loro caratteristiche.
