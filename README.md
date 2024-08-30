@@ -17,12 +17,12 @@ Importare il dataset con `pandas` e visualizzare la tabella.
 ### 2. Esplorazione dei Valori Nulli
 Esplorare la situazione dei valori nulli nel dataset.
 
-### 4. Analisi delle Features
+### 3. Analisi delle Features
 - **Quali sono le feature Categoriche?**
 - **Quali sono le feature Ordinali?**
 - **Quali sono le feature Continue?**
 
-### 3. Analisi dei Sopravvissuti
+### 4. Analisi dei Sopravvissuti
 Numero di sopravvissuti: è la variabile che ci interessa esplorare e comprendere, mentre esploreremo tutte le altre feature in relazione ad essa. Iniziamo creando dei grafici sul numero di sopravvissuti (ad esempio a Torta o a Barre).
 
 #### Sex (Genere)
