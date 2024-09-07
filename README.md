@@ -1,67 +1,67 @@
-# Analisi Esplorativa del Titanic Dataset
+# Exploratory Analysis of the Titanic Dataset
 
-L'affondamento del Titanic è uno dei naufragi più famosi della storia. Il 15 aprile 1912, durante il suo viaggio inaugurale, il Titanic affondò dopo aver colliso con un iceberg, causando la morte di 1502 delle 2224 persone tra passeggeri e membri dell'equipaggio. La costruzione del Titanic costò circa 7,5 milioni di dollari, e affondò nell'oceano a causa della collisione.
+The sinking of the Titanic is one of the most famous shipwrecks in history. On April 15, 1912, during its maiden voyage, the Titanic sank after colliding with an iceberg, causing the death of 1502 of the 2224 passengers and crew members. The construction of the Titanic cost about 7.5 million dollars, and it sank into the ocean due to the collision.
 
-Dataset:   [Titanic - Kaggle](https://www.kaggle.com/competitions/titanic)
+Dataset: [Titanic - Kaggle](https://www.kaggle.com/competitions/titanic)
 
-## Obiettivo
-L’obiettivo è quello di creare un notebook per effettuare un’analisi esplorativa dei dati e capire se chi è sopravvissuto è semplicemente stato fortunato o se ci fossero persone che avessero più probabilità di altre di salvarsi, in relazione alle loro caratteristiche.
+## Objective
+The goal is to create a notebook for conducting an exploratory data analysis to determine if the survivors were simply lucky or if some individuals had a higher chance of surviving based on their characteristics.
 
-Per questo progetto utilizzeremo le librerie `pandas` per la manipolazione dei dati, `matplotlib` per la visualizzazione dei dati.
+For this project, we will use the `pandas` library for data manipulation and `matplotlib` for data visualization.
 
-## Passaggi dell'Analisi
+## Analysis Steps
 
-#### 1. Importazione del Dataset
-Importare il dataset con `pandas` e visualizzare la tabella.
+#### 1. Importing the Dataset
+Import the dataset using `pandas` and display the table.
 
-#### 2. Esplorazione dei Valori Nulli
-Esplorare la situazione dei valori nulli nel dataset.
+#### 2. Exploring Missing Values
+Examine the missing values in the dataset.
 
-#### 3. Analisi delle Features
-- Quali sono le feature Categoriche?
-- Quali sono le feature Ordinali?
-- Quali sono le feature Continue?
+#### 3. Feature Analysis
+- What are the Categorical features?
+- What are the Ordinal features?
+- What are the Continuous features?
 
 #### 4. Survived
-Che tipo di variabile è?
-Numero di sopravvissuti: è la variabile che ci interessa esplorare e comprendere, mentre esploreremo tutte le altre feature in relazione ad essa. Iniziamo creando dei grafici sul numero di sopravvissuti (ad esempio a Torta o a Barre).
+What type of variable is it?
+Number of survivors: this is the variable we are interested in exploring and understanding, while we will explore all the other features in relation to it. Let's start by creating some charts on the number of survivors (such as Pie or Bar charts).
 
-#### 5. Sex (Genere)
-- Che tipo di variabile è?
-- Quanti sono gli uomini e le donne sopravvissuti? E i non sopravvissuti?
-- Scegliere una visualizzazione per riassumere al meglio l’informazione.
-- **Quali insights possiamo trarre?**
+#### 5. Sex (Gender)
+- What type of variable is it?
+- How many men and women survived? And how many did not?
+- Choose a visualization to best summarize the information.
+- **What insights can we derive?**
 
-#### 6. Pclass (Classe di Biglietto)
-- Che tipo di variabile è?
-- Come si suddividono le varie classi tra sopravvissuti e non sopravvissuti? C’è una relazione tra la ricchezza dei passeggeri e la loro probabilità di sopravvivere?
-- Scegliere una visualizzazione per riassumere al meglio l’informazione.
-- **Quali insights possiamo trarre?**
+#### 6. Pclass (Ticket Class)
+- What type of variable is it?
+- How are the different classes divided between survivors and non-survivors? Is there a relationship between the wealth of passengers and their probability of survival?
+- Choose a visualization to best summarize the information.
+- **What insights can we derive?**
 
-#### 7. Relazione tra Sex e Pclass
-La classe influenza in qualche modo le probabilità di sopravvivere maggiormente per uno o per l’altro sesso, oppure è indifferente? Suggerimento: qui potrebbe essere una buona scelta una visualizzazione che consenta di distinguere tre dimensioni.
+#### 7. Relationship between Sex and Pclass
+Does class influence the chances of survival more for one gender than the other, or does it not make a difference? Hint: a visualization that allows distinguishing three dimensions might be a good choice here.
 
 #### 8. Age
-- Che tipo di variabile è?
-- Descrivi la distribuzione: trova il valore minimo, massimo, la media, la mediana e la moda.
+- What type of variable is it?
+- Describe the distribution: find the minimum, maximum, mean, median, and mode.
 
-  ##### Data Cleaning e Feature Extraction
-  Studiamo meglio la variabile per migliorare la qualità del dato:
-  - **Valori Nulli:**
-    - Quanti sono valori nulli?
-    - Quali approcci generici possiamo usare per imputare i valori nulli? Quale potrebbe essere il problema di un approccio generico in questo caso?
+  ##### Data Cleaning and Feature Extraction
+  Let's study the variable further to improve data quality:
+  - **Missing Values:**
+    - How many missing values are there?
+    - What general approaches can we use to impute missing values? What could be the problem with a generic approach in this case?
   - **Feature Extraction:**
-    - Per questo dataset, possiamo utilizzare un approccio specifico: la colonna `Name` contiene anche il titolo (Master, Miss, Mr, Mrs). Effettuiamo una feature extraction, creando una nuova colonna a partire da quella del nome, che contenga solo il titolo.
-    - Per ottenere questo risultato bisogna utilizzare una regex che è la seguente: `'([A-Za-z]+)\.'`.
-    - Una volta ottenuta la colonna dei titoli, computare la media per ognuno di essi ed imputare i valori nulli di età sulla base di questo risultato.
+    - For this dataset, we can use a specific approach: the `Name` column also contains the title (Master, Miss, Mr, Mrs). Perform feature extraction by creating a new column from the name column, containing only the title.
+    - To achieve this, use the following regex: `'([A-Za-z]+)\.'`.
+    - Once the title column is obtained, compute the average age for each title and impute missing age values based on this result.
 
-#### 9. Relazione tra Sex, Pclass e Age:
-  - Come si relaziona l’età con la classe? E con il sesso? Suggerimento: qui potrebbe essere una buona scelta creare due visualizzazioni che consentano di distinguere tre dimensioni (età, sesso o classe, sopravvisuto).
-  - **Quali insights possiamo trarre sui salvataggi delle diverse demografiche?**
+#### 9. Relationship between Sex, Pclass, and Age:
+  - How does age relate to class? And to gender? Hint: creating two visualizations that allow distinguishing three dimensions (age, gender or class, survival) might be a good choice here.
+  - **What insights can we derive about the survival of different demographics?**
 
-#### 10. Correlazioni tra le Feature (Correlazione Lineare di Pearson)
-- Creare una heatmap di correlazioni tra le feature.
-- **Quali informazioni possiamo estrarre da questa heatmap?**
+#### 10. Correlations between Features (Pearson's Linear Correlation)
+- Create a correlation heatmap between the features.
+- **What insights can we derive from this heatmap?**
 
-#### 11. Sommario dei Findings per ogni Feature
-- Riassunto delle osservazioni e degli insights per ogni feature analizzata.
+#### 11. Summary of Findings for Each Feature
+- Summary of observations and insights for each analyzed feature.
